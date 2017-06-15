@@ -1,0 +1,55 @@
+.row-teclas div  {
+	display: block;	
+}
+
+.row-teclas {
+	clear: left;
+}
+.ultima {
+
+}
+.row-visor {
+	text-align: center;
+	margin-bottom: 5px;
+	margin-top: 10px;
+}
+@font-face {
+     font-family: "DS-DIGIT";
+     src: url('../font/DS-DIGIT.TTF');
+}
+#visor {
+	height:30px;
+	width: 90%;
+	background-color: black;
+	color: white;
+	text-align: right;
+	padding-left: 2px;
+	padding-right: 5px;
+	font-family: "DS-DIGIT";
+	font-size: 18px;
+}
+
+.container-teclas {
+	clear: left;
+}
+	
+.tecla {
+	float: left;
+}
+
+.tecla input {
+	width: 50px;
+	height:50px;	
+}
+
+#calculadora {
+	border: 2px solid gray;
+	clear: right;
+	padding: 5px;
+	width: 202px;
+}
+
+.container-teclas{
+	border: 1px solid red;
+	width: 200px
+}
