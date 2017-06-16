@@ -16,34 +16,34 @@
 				</div>
 				<div class="container-teclas">
 					<div class="row-teclas">
-						<div class="tecla"> <input type="button" value="C" onclick="" /> </div>
+						<div class="tecla"> <input type="button" value="C" onclick="btC()" /> </div>
 						<div class="tecla"> <input type="button" value="%" onclick="" /> </div>
 						<div class="tecla"> <input type="button" value="√" onclick="" /> </div>
-						<div class="tecla"> <input type="button" value="÷" onclick="" /> </div>
+						<div class="tecla"> <input type="button" value="÷" onclick="operar(getElementById('visor').value, 4)" /> </div>
 					</div>
 					<div class="row-teclas">
 						<div class="tecla"> <input type="button" value="7" onclick="bt7(getElementById('visor').value)" /> </div>
 						<div class="tecla"> <input type="button" value="8" onclick="bt8(getElementById('visor').value)" /> </div>
 						<div class="tecla"> <input type="button" value="9" onclick="bt9(getElementById('visor').value)" /> </div>
-						<div class="tecla"> <input type="button" value="×" onclick="" /> </div>
+						<div class="tecla"> <input type="button" value="×" onclick="operar(getElementById('visor').value, 3)" /> </div>
 					</div>
 					<div class="row-teclas">
 						<div class="tecla"> <input type="button" value="4" onclick="bt4(getElementById('visor').value)" /> </div>
 						<div class="tecla"> <input type="button" value="5" onclick="bt5(getElementById('visor').value)" /> </div>
 						<div class="tecla"> <input type="button" value="6" onclick="bt6(getElementById('visor').value)" /> </div>
-						<div class="tecla"> <input type="button" value="-" onclick="" /> </div>
+						<div class="tecla"> <input type="button" value="-" onclick="operar(getElementById('visor').value, 2)" /> </div>
 					</div>
 					<div class="row-teclas">
 						<div class="tecla"> <input type="button" value="1" onclick="bt1(getElementById('visor').value)" /> </div>
 						<div class="tecla"> <input type="button" value="2" onclick="bt2(getElementById('visor').value)" /> </div>
 						<div class="tecla"> <input type="button" value="3" onclick="bt3(getElementById('visor').value)" /> </div>
-						<div class="tecla"> <input type="button" value="+" onclick="" /> </div>
+						<div class="tecla"> <input type="button" value="+" onclick="operar(getElementById('visor').value, 1)" /> </div>
 					</div>
 					<div class="row-teclas">
 						<div class="tecla"> <input type="button" value="0" onclick="bt0(getElementById('visor').value)" /> </div>
 						<div class="tecla"> <input type="button" value="." onclick="" /> </div>
 						<div class="tecla"> <input type="button" value="x²" onclick="" /> </div>
-						<div class="tecla"> <input type="button" value="=" onclick="" /> </div>		
+						<div class="tecla"> <input type="button" value="=" onclick="executar(getElementById('visor').value)" /> </div>		
 					</div>
 					<div style="clear: both"> </div> <!-- so pra limpar o float -->
 				</div>
