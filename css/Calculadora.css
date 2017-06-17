@@ -53,3 +53,9 @@
 	border: 1px solid red;
 	width: 200px
 }
+
+header {
+    padding: 1em;
+    clear: center;
+    text-align: center;
+}

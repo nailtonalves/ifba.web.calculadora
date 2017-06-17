@@ -1,16 +1,16 @@
 var num1;
 var num2;
-var operacao = 0; //1- adic, 2- subt, 3-mult, 4-divi
+var operacao = 0; //1- adic, 2- subt, 3-mult, 4-divi 5-porcentagem
 //var pvisor = document.getElementById("visor");
 
 function operar(num, operador) {
-	num1 = parseInt(num);
+	num1 = parseFloat(num);
 	operacao = parseInt(operador);
-	document.getElementById("visor").value = "Digite o segundo numero";
+	document.getElementById("visor").value = "Aguardando valor";
 }
 
 function executar(num) {
-  num2 = parseInt(num);
+  num2 = parseFloat(num);
   var resposta;
   switch (operacao) {
 	  case 1:
@@ -27,6 +27,10 @@ function executar(num) {
 	  
 	  case 4:
 	  resposta = divi();
+	  break;
+	  
+	  case 5:
+	  resposta = porc();
 	  break;
   }
   
@@ -53,10 +57,15 @@ function divi() {
   return resultado;
 }
 
+function porc() {
+  var resultado = num1 * (num2/100);
+  return resultado;
+}
+
 //Funcoes dos botoes
 
 function bt1(num) {
-	if ( (num == "resultado") || (num == "Digite o segundo numero") || (num == "0") ) {
+	if ( (num == "resultado") || (num == "Aguardando valor") || (num == "0") ) {
 		document.getElementById("visor").value = "1";
 	} else {
 		document.getElementById("visor").value = num + "1";
@@ -64,7 +73,7 @@ function bt1(num) {
 }
 
 function bt2(num) {
-	if ( (num == "resultado") || (num == "Digite o segundo numero") || (num == "0") ) {
+	if ( (num == "resultado") || (num == "Aguardando valor") || (num == "0") ) {
 		document.getElementById("visor").value = "2";
 	} else {
 		document.getElementById("visor").value = num + "2";
@@ -72,7 +81,7 @@ function bt2(num) {
 }
 
 function bt3(num) {
-	if ( (num == "resultado") || (num == "Digite o segundo numero") || (num == "0") ) {
+	if ( (num == "resultado") || (num == "Aguardando valor") || (num == "0") ) {
 		document.getElementById("visor").value = "3";
 	} else {
 		document.getElementById("visor").value = num + "3";
@@ -80,7 +89,7 @@ function bt3(num) {
 }
 
 function bt4(num) {
-	if ( (num == "resultado") || (num == "Digite o segundo numero") || (num == "0") ) {
+	if ( (num == "resultado") || (num == "Aguardando valor") || (num == "0") ) {
 		document.getElementById("visor").value = "4";
 	} else {
 		document.getElementById("visor").value = num + "4";
@@ -88,7 +97,7 @@ function bt4(num) {
 }
 
 function bt5(num) {
-	if ( (num == "resultado") || (num == "Digite o segundo numero") || (num == "0") ) {
+	if ( (num == "resultado") || (num == "Aguardando valor") || (num == "0") ) {
 		document.getElementById("visor").value = "5";
 	} else {
 		document.getElementById("visor").value = num + "5";
@@ -96,7 +105,7 @@ function bt5(num) {
 }
 
 function bt6(num) {
-	if ( (num == "resultado") || (num == "Digite o segundo numero") || (num == "0") ) {
+	if ( (num == "resultado") || (num == "Aguardando valor") || (num == "0") ) {
 		document.getElementById("visor").value = "6";
 	} else {
 		document.getElementById("visor").value = num + "6";
@@ -104,7 +113,7 @@ function bt6(num) {
 }
 
 function bt7(num) {
-	if ( (num == "resultado") || (num == "Digite o segundo numero") || (num == "0") ) {
+	if ( (num == "resultado") || (num == "Aguardando valor") || (num == "0") ) {
 		document.getElementById("visor").value = "7";
 	} else {
 		document.getElementById("visor").value = num + "7";
@@ -112,7 +121,7 @@ function bt7(num) {
 }
 
 function bt8(num) {
-	if ( (num == "resultado") || (num == "Digite o segundo numero") || (num == "0") ) {
+	if ( (num == "resultado") || (num == "Aguardando valor") || (num == "0") ) {
 		document.getElementById("visor").value = "8";
 	} else {
 		document.getElementById("visor").value = num + "8";
@@ -120,7 +129,7 @@ function bt8(num) {
 }
 
 function bt9(num) {
-	if ( (num == "resultado") || (num == "Digite o segundo numero") || (num == "0") ) {
+	if ( (num == "resultado") || (num == "Aguardando valor") || (num == "0") ) {
 		document.getElementById("visor").value = "9";
 	} else {
 		document.getElementById("visor").value = num + "9";
@@ -128,10 +137,34 @@ function bt9(num) {
 }
 
 function bt0(num) {
-	if ( (num == "resultado") || (num == "Digite o segundo numero") || (num == "0") ) {
+	if ( (num == "resultado") || (num == "Aguardando valor") || (num == "0") ) {
 		document.getElementById("visor").value = "0";
 	} else {
 		document.getElementById("visor").value = num + "0";
+	}
+}
+
+function btPonto(num) {
+	if ( (num == "resultado") || (num == "Aguardando valor") || (num == "0") ) {
+		document.getElementById("visor").value = "0.";
+	} else {
+		document.getElementById("visor").value = num + ".";
+	}
+}
+
+function btQuadrado(num) {
+	if ( (num == "resultado") || (num == "Aguardando valor") || (num == "0") ) {
+		document.getElementById("visor").value = "0";
+	} else {
+		document.getElementById("visor").value = Math.pow(parseFloat(num), 2);
+	}
+}
+
+function btRaiz(num) {
+	if ( (num == "resultado") || (num == "Aguardando valor") || (num == "0") ) {
+		document.getElementById("visor").value = "0";
+	} else {
+		document.getElementById("visor").value = Math.sqrt(parseFloat(num));
 	}
 }
 
